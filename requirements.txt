@@ -1,0 +1,7 @@
+streamlit
+groq
+elevenlabs
+python-dotenv
+uvicorn
+requests
+psutil
