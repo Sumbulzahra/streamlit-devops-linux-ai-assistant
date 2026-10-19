@@ -1,40 +1,67 @@
-# DevOps AI & Docker Assistant 🚀
+# DevOps Linux & Docker AI Assistant 🚀
 
-An interactive Streamlit-based AI assistant designed to help DevOps engineers and system administrators monitor system performance, execute diagnostics, and query AI models (Groq) for quick technical insights and documentation.
+A Streamlit-based web application that serves as an AI assistant for DevOps engineers and system administrators. It combines live system monitoring with interactive AI troubleshooting.
 
 ---
 
-## 🌟 Features
+## ✨ Features
 
-* **Interactive AI Chatbot:** Ask questions about Linux commands, Docker, CI/CD, and cloud infrastructures powered by Groq.
-* **Real-time System Monitoring:** View live CPU usage, RAM utilization, and system status metrics.
-* **Voice Integration:** Text-to-speech capabilities powered by ElevenLabs for voice assistance.
-* **Cloud Ready:** Fully configured for seamless deployment on AWS Elastic Beanstalk.
+- **AI Chatbot:** Answers Linux, Docker, and DevOps troubleshooting queries using Groq API.
+- **System Monitoring:** Displays real-time CPU, Memory, and system status metrics using `psutil`.
+- **Voice Assistance:** Converts text responses to speech via ElevenLabs API.
+- **Cloud Ready:** Configured for seamless deployment on AWS Elastic Beanstalk.
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Frontend & UI:** Streamlit
-* **AI Engine:** Groq API / OpenAI SDK
-* **Voice/Audio:** ElevenLabs SDK
-* **System Metrics:** psutil, python-dotenv
-* **Deployment:** AWS Elastic Beanstalk (Python / Linux)
+- **Frontend & Dashboard:** Streamlit
+- **AI Core:** Groq API (LLM)
+- **Voice Synthesis:** ElevenLabs API
+- **System Metrics:** `psutil`
+- **Deployment Platform:** AWS Elastic Beanstalk (Python 3.10 / Linux)
 
 ---
 
 ## ⚙️ Environment Variables
 
-To run this application locally or deploy it on AWS, you need to configure the following environment properties:
+Set the following environment variables locally in a `.env` file or in AWS Elastic Beanstalk Environment Properties:
 
-* `GROQ_API_KEY`: Your Groq API key
-* `ELEVENLABS_API_KEY`: Your ElevenLabs API key
+env
+GROQ_API_KEY=your_groq_api_key
+ELEVENLABS_API_KEY=your_elevenlabs_api_key
+
+##🚀 Quick Start (Local Setup)
+Clone the repository:
+
+bash
+git clone [https://github.com/Sumbulzahra/streamlit-devops-linux-ai-assistant.git](https://github.com/Sumbulzahra/streamlit-devops-linux-ai-assistant.git)
+cd streamlit-devops-linux-ai-assistant
+
+Create and activate a virtual environment:
+
+Bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+Install dependencies:
+
+Bash
+pip install -r requirements.txt
+Run the application:
+
+Bash
+streamlit run app.py
 
 ---
 
-## 🚀 Local Setup & Installation
+##☁️ Deployment on AWS Elastic Beanstalk
+Ensure requirements.txt includes essential packages (streamlit, groq, elevenlabs, psutil, requests, python-dotenv).
 
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/sumbulzahra/devops-ai-assistant.git](https://github.com/sumbulzahra/devops-ai-assistant.git)
-   cd devops-ai-assistant
+Create a .zip archive of the project files (excluding venv/ and .env).
+
+Deploy the .zip file on AWS Elastic Beanstalk Python environment.
+
+Configure GROQ_API_KEY and ELEVENLABS_API_KEY in Configuration > Software > Environment properties.
+
+##📄 License
+This project is licensed under the MIT License.
