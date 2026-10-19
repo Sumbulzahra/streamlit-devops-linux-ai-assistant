@@ -31,7 +31,7 @@ env
 GROQ_API_KEY=your_groq_api_key
 ELEVENLABS_API_KEY=your_elevenlabs_api_key
 
-##🚀 Quick Start (Local Setup)
+## 🚀 Quick Start (Local Setup)
 Clone the repository:
 
 bash
@@ -54,7 +54,7 @@ streamlit run app.py
 
 ---
 
-##☁️ Deployment on AWS Elastic Beanstalk
+## ☁️ Deployment on AWS Elastic Beanstalk
 Ensure requirements.txt includes essential packages (streamlit, groq, elevenlabs, psutil, requests, python-dotenv).
 
 Create a .zip archive of the project files (excluding venv/ and .env).
@@ -63,5 +63,5 @@ Deploy the .zip file on AWS Elastic Beanstalk Python environment.
 
 Configure GROQ_API_KEY and ELEVENLABS_API_KEY in Configuration > Software > Environment properties.
 
-##📄 License
+## 📄 License
 This project is licensed under the MIT License.
